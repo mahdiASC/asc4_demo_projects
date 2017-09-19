@@ -432,16 +432,16 @@ a, a:hover
 }
 /****/
 .demo_desc{
-    height:150px;
+    /* height:150px; */
     text-align: center;
     background-color: #51c1e9;
     padding: 25px 0;
     font-family: 'Lato', sans-serif;
 }
 
-.demo_desc>h2, .project-container>h2, .video>h2{
+.demo_desc > h2, .project-container > h2, .video > h2{
     margin-top: 0;
-    color: #888;
+    color: #333;
     text-align: center;
 }
 .demo_desc p{
