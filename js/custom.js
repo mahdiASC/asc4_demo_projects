@@ -26,7 +26,7 @@
 
 
 $(document).ready(function () {
-    $.get("../data/data.txt", function (data) {
+    $.get("https://raw.githubusercontent.com/mahdiASC/asc4_demo_projects/master/data/data.txt", function (data) {
             processData(data);
         });
 });
