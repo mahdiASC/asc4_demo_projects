@@ -438,7 +438,7 @@ a, a:hover
     font-family: 'Lato', sans-serif;
 }
 
-.demo_desc h2, .project-container h2{
+.demo_desc h2, .project-container h2, .video h2{
     margin-top: 0;
     color: #888;
     text-align: center;
@@ -455,6 +455,7 @@ a, a:hover
 
 .project-wrapper{
     border: red solid 2px;
+    background-color: #51c1e9;
     width:75%;
     margin: 0 auto;
 }
@@ -503,4 +504,10 @@ a, a:hover
 
 .links a{
     margin: 5px;
+}
+
+.video{
+    padding-top: 30px;
+    text-align: center;
+    margin: 3%;
 }
