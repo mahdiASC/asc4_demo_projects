@@ -49,34 +49,56 @@ function processData(allText) {
     var allTextLines = allText.split(/\r\n|\n/);
     allTextLines.shift(); //killing header
     var output = [];
-    // while (allTextLines.length > 0) {
-    let splits = allTextLines.shift().split(',');
-    output.push(new Project(splits[0],splits[1],splits[2],splits[3]));
-    // }
+    while (allTextLines.length > 0) {
+        let splits = allTextLines.shift().split(';');
+        output.push(new Project(splits[0],splits[1],splits[2],splits[3],splits[4],splits[5]));
+    }
     buildProjects(output);
 }
 
 let buildProjects = x => {
-    for(w of x){
-        buildProject(w);
+    for(let i = 0 ; i < x.length; i ++){
+        buildProject(x[i],i);
     }
 }
 
-let buildProject = x => {
+let buildProject = (x,y) => {
+    //Need to include direct link and github links
     let project_container = $('<div/>');
-    project_container.append(`<img src="img/banner.jpeg">`);
+    project_container.addClass('project');
+
+    let img = $('<div/>');
+    img.addClass('proj_img');
+    img.append(`<img src="./img/${x.img}">`);
+
+    let links = $('<div/>');
+    links.addClass('links');
+    links.append(`<a href="${x.link}"><i class="fa fa-link fa-3x" aria-hidden="true"></i></a>`);
+    links.append(`<a href="${x.github}"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>`);
+    img.append(links);
+
     let text = $('<div/>');
+    text.addClass('proj_text');
     text.append(`<h2>${x.name}</h2>`)
     text.append(`<h4>${x.students}</h4>`)
     text.append(`<p>${x.desc}</h2>`)
-    project_container.append(text);
+    
+    if(y%2==0){
+        project_container.append(img);
+        project_container.append(text);
+    }else{
+        project_container.append(text);
+        project_container.append(img);
+    }
     $('.project-wrapper').append(project_container);
 }
 class Project{
-    constructor(name, students, desc, img){
+    constructor(name, students, desc, img, link, gh){
         this.name = name;
         this.students = students.split(":").join(', ');
         this.desc = desc;
         this.img = img;
+        this.link = link;
+        this.github = gh;
     }
 }
