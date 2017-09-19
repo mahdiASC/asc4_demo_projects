@@ -471,6 +471,7 @@ a, a:hover
     width: auto;
     max-width: 100%;
     height: auto;
+    max-height: 250px;
 }
 
 
@@ -498,6 +499,7 @@ a, a:hover
     display: inline-block;
     vertical-align: middle;
     position: relative;
+    text-align: center;
 }
 
 .proj_img .links{
