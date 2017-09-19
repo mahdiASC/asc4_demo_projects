@@ -35,7 +35,7 @@
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "../data.tsv",
+        url: "../data.txt",
         dataType: "text",
         success: function (data) {
             processData(data);
