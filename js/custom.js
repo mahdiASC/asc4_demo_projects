@@ -35,7 +35,7 @@
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "../data.txt",
+        url: "../data.tsv",
         dataType: "text",
         success: function (data) {
             processData(data);
@@ -50,7 +50,7 @@ function processData(allText) {
     allTextLines.shift(); //killing header
     var output = [];
     while (allTextLines.length > 0) {
-        let splits = allTextLines.shift().split(';');
+        let splits = allTextLines.shift().split('\t');
         output.push(new Project(splits[0],splits[1],splits[2],splits[3],splits[4],splits[5]));
     }
     buildProjects(output);
@@ -69,12 +69,12 @@ let buildProject = (x,y) => {
 
     let img = $('<div/>');
     img.addClass('proj_img');
-    img.append(`<img src="./img/${x.img}">`);
+    img.append(`<img src="${x.img}">`);
 
     let links = $('<div/>');
     links.addClass('links');
-    links.append(`<a href="${x.link}"><i class="fa fa-link fa-3x" aria-hidden="true"></i></a>`);
-    links.append(`<a href="${x.github}"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>`);
+    links.append(`<a href="${x.link}" target="_blank"><i class="fa fa-link fa-3x" aria-hidden="true"></i></a>`);
+    links.append(`<a href="${x.github}" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>`);
     img.append(links);
 
     let text = $('<div/>');

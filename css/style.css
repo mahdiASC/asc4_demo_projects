@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6
 }
 p
 {
-	color: #888;
+	color: black;
 }
 .icon {
     position: relative;
@@ -319,7 +319,8 @@ h3.txt-tl {
 }
 a, a:hover
 {
-	color: #51c1e9;
+    color: #333;
+    /* mix-blend-mode: difference; */
 }
 .cont-title
 {
@@ -438,40 +439,59 @@ a, a:hover
     font-family: 'Lato', sans-serif;
 }
 
-.demo_desc h2, .project-container h2, .video h2{
+.demo_desc>h2, .project-container>h2, .video>h2{
     margin-top: 0;
     color: #888;
     text-align: center;
 }
 .demo_desc p{
     font-size: 1.5em;
-    color:black;
+    color:#333;
 }
 
 .project-container{
-    background-color: black;
+    background-image: url('../img/bott_bann.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 40px 0;
 }
 
 .project-wrapper{
-    border: red solid 2px;
-    background-color: #51c1e9;
+    /* border: red solid 2px; */
+    background-color: rgba(130, 133, 220,.75);
     width:75%;
     margin: 0 auto;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
 .proj_img img{
     width:100%;
+    max-height: 200px;
 }
 
 
 .project{
-    border: green solid 2px;
+    border-top: #EBAB24 solid 1px;
+    border-bottom: #EBAB24 solid 1px;
+    border-right: #EBAB24 solid 2px;
+    border-left: #EBAB24 solid 2px;
     width:100%;
+    font-family: 'Lato', sans-serif;
+}
+
+.project:first{
+    border-top: #EBAB24 solid 2px;
+}
+
+.project:last{
+    border-bottom: #EBAB24 solid 2px;
 }
 
 .project .proj_img{
-    border: blue solid 2px;
+    /* border: blue solid 2px; */
     width:25%;
     height:100%;
     display: inline-block;
@@ -486,20 +506,25 @@ a, a:hover
 }
 
 .project .proj_text{
-    border: pink solid 2px;
+    /* border: pink solid 2px; */
     display: inline-block;
     height: 100%;
     width: 75%;
     vertical-align: middle;
     padding: 0 1%;
 }
+.proj_text > h2{
+    text-decoration: underline;
+}
 
 .project:nth-child(even) .proj_text{
     text-align: right;
+    border-right: #EBAB24 solid 2px;
 }
 
 .project:nth-child(odd) .proj_text{
     text-align: left;
+    border-left: #EBAB24 solid 2px;
 }
 
 .links a{
@@ -510,4 +535,17 @@ a, a:hover
     padding-top: 30px;
     text-align: center;
     margin: 3%;
+    width: 623px;
+    margin: 0 auto;
+    background-color: rgba(130, 133, 220,.75);
+    border-left: #EBAB24 solid 2px;
+    border-right: #EBAB24 solid 2px;
+    border-bottom: #EBAB24 solid 2px;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+.video > h2{
+    color: #333
 }

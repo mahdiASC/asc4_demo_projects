@@ -1,3 +1,0 @@
-name;students;desc;img-url;direct_link;github
-bob;sam as:wade job:juan pablo;this is a good description;port04.jpg;#;#
-Generic Project Title;bob just:mahdi julius:shaun paul;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque omnis veniam cum quam deleniti corporis distinctio possimus corrupti quo. Eius culpa similique, qui doloremque facilis cupiditate voluptatum? Nobis, non?;port04.jpg;,#;#
