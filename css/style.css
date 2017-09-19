@@ -435,7 +435,7 @@ a, a:hover
     /* height:150px; */
     text-align: center;
     background-color: #51c1e9;
-    padding: 25px 0;
+    padding: 25px 15%;
     font-family: 'Lato', sans-serif;
 }
 
@@ -468,8 +468,9 @@ a, a:hover
 }
 
 .proj_img img{
-    width:100%;
-    max-height: 200px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 
